@@ -22,14 +22,14 @@
                 <h2>Enroll Page.</h2>
                 <p>Let Us Have Some Your Information To Get Us Started.</p>
             </div>
-            <form action="http://localhost:8000/waitings/add" method="POST" class="main-form" autocomplete="off">
+            <form class="main-form" autocomplete="off" id="form">
                 <div>
                     <p>Your Full Name</p>
-                    <input type="text" placeholder="enter your full name" name="name">
+                    <input type="text" placeholder="enter your full name" id="name" name="name">
                 </div>
                 <div>
                     <p>Email Address</p>
-                    <input type="email" name="email" id="" placeholder=" enter your email address">
+                    <input type="email" name="email" id="email" placeholder=" enter your email address">
                 </div>
                 <div class="select">
                     <select name="course" id="format">
@@ -47,7 +47,7 @@
                     <input type="text">
                 
                 </div> -->
-                <button class="enroll-btn">Enroll Now</button>
+                <button class="enroll-btn" onclick="enroll">Enroll Now</button>
             </form>
             <div class="disclaimer">
                 <p>disclaimer: all your important information and data are completely digital and safe.</p>
@@ -81,20 +81,42 @@
     <script src="main.js"></script>
     <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
     <script>
-        $(document).ready(()=>{
-            $('#form').submit((e)=> {
-                e.preventDefault();
-                $.ajax({
-                    url: 'https://silicio.herokuapp.com',
-                    type: 'post',
-                    contentType: 'application/json',
-                    data: JSON.stringify($('#form').serializeArray()),
-                    success: (response) => {
+        // $(document).ready(()=>{
+        //     $('#form').submit((e)=> {
+        //         e.preventDefault();
+        //         $.ajax({
+        //             url: 'https://silicio.herokuapp.com/waitings/add',
+        //             type: 'post',
+        //             contentType: 'application/json',
+        //             data: JSON.stringify($('#form').serializeArray()),
+        //             success: (response) => {
 
-                    }
-                })
-            })
+        //             }
+        //         })
+        //     })
+        // })
+        document.getElementsByClassName('enroll-btn').addEventListener('click', enroll)
+        function enroll(ev){
+            ev.preventDefault()
+            let data = new FormData()
+        data.append("name", document.getElementById('name').value)
+        data.append("course", document.getElementById('format').value)
+        data.append("email", document.getElementById('email').value)
+
+        let req = new Request('https://silicio.herokuapp.com/waitings/add', {
+            method: "POST",
+            body: data,
+            mode: 'no-cors'
         })
+        fetch(req)
+        .then((resp)=>{
+            alert("You've successfully enrolled for the silicio boot camps ")
+        })
+        .catch(err =>{
+            alert("Error enrolling")
+        })
+        }
+        
     </script>
 </body>
 </html>
