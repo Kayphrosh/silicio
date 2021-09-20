@@ -17,7 +17,7 @@ db.once('open', () => {
     console.log('Database Connection Established')
 })
 
-const port = "7000" || process.env.PORT
+const port = process.env.PORT || 7000
 const app = express()
 app.use('/public',express.static(path.join(__dirname, 'static')))
 app.set('view engine', 'ejs')
