@@ -30,6 +30,6 @@ app.get("/", (req, res) => {
 });
 
 app.use('/', WaitingRoute)
-app.listen('7000', (err) => {
+app.listen(port, (err) => {
     console.log('Server started on port', port)
 })
