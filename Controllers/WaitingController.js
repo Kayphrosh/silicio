@@ -26,9 +26,11 @@ const add = (req, res, next) => {
     let wait = new Waiting(user)
     wait.save()
     .then(response  => {
+        res.redirect('http://127.0.0.1:5503/')
         res.json({
-            message: "Wait added successfuly"
+            message: "You've successfuly been added to the Silicio boot camp waitin list!!!"
         })
+        
     })
     .catch(eror => {
         res.json({

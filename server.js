@@ -19,10 +19,9 @@ db.once('open', () => {
 
 const port = process.env.PORT || 7000
 const app = express()
-app.use('/public',express.static(path.join(__dirname, 'static')))
-app.set('view engine', 'ejs')
+// app.use('/public',express.static(path.join(__dirname, 'static')))
+// app.set('view engine', 'ejs')
 app.use(urlencoded({ extended: false }))
-app.use(bodyParser.json())
 app.use(json())
 
 app.get("/", (req, res) => {

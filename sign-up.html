@@ -22,23 +22,27 @@
                 <h2>Enroll Page.</h2>
                 <p>Let Us Have Some Your Information To Get Us Started.</p>
             </div>
-            <form class="main-form" autocomplete="off" id="form">
+            <form action="http://localhost:7000/waitings/add" method="POST" class="main-form" autocomplete="off" id="form">
                 <div>
                     <p>Your Full Name</p>
-                    <input type="text" placeholder="enter your full name" id="name" name="name">
+                    <input type="text" placeholder="enter your full name" id="name" name="name" required>
                 </div>
                 <div>
                     <p>Email Address</p>
-                    <input type="email" name="email" id="email" placeholder=" enter your email address">
+                    <input type="email" name="email" id="email" placeholder=" enter your email address" required>
+                </div>
+                <div>
+                    <p>Phone Number</p>
+                    <input type="tel" name="phone" id="phone" placeholder="+24380....." required>
                 </div>
                 <div class="select">
-                    <select name="course" id="format">
+                    <select name="course" id="format" required>
                        <option selected disabled>Kindly choose the Skill you're Interested in</option>
-                       <option value="pdf">Data Science</option>
-                       <option value="txt">UI/UX</option>
-                       <option value="epub">Frontend</option>
-                       <option value="fb2">Backend</option>
-                       <option value="mobi">Mobile App Developent</option>
+                       <option value="Data Science">Data Science</option>
+                       <option value="UI/UX">UI/UX</option>
+                       <option value="Frontend">Frontend</option>
+                       <option value="Backend">Backend</option>
+                       <option value="Mobile App Developent">Mobile App Developent</option>
                        <option value="mobi">Graphics Design</option>
                     </select>
                  </div>
@@ -47,7 +51,7 @@
                     <input type="text">
                 
                 </div> -->
-                <button class="enroll-btn" onclick="enroll">Enroll Now</button>
+                <button class="enroll-btn">Enroll Now</button>
             </form>
             <div class="disclaimer">
                 <p>disclaimer: all your important information and data are completely digital and safe.</p>
@@ -84,20 +88,26 @@
         
         document.getElementsByClassName('enroll-btn').addEventListener('click', enroll)
         function enroll(ev){
-            ev.preventDefault()
+            // ev.preventDefault()
             let data = new FormData()
         data.append("name", document.getElementById('name').value)
         data.append("course", document.getElementById('format').value)
         data.append("email", document.getElementById('email').value)
+        
+        let h = new Headers()
+        h.append("Accept", 'application/json')
 
-        let req = new Request('https://silicio.herokuapp.com/waitings/add', {
+        let req = new Request('http://localhost:7000/waitings/add', {
             method: "POST",
-            body: data,
+            headers: h,
+            body: {"name": document.getElementById('name').value,
+                    "email": document.getElementById('format').value,
+                    "course": document.getElementById('email').value},
             mode: 'no-cors'
         })
         fetch(req)
         .then((resp)=>{
-            alert("You've successfully enrolled for the silicio boot camps ")
+            alert("You've successfully enrolled for the silicio boot camp's waiting list "+ document.getElementById('name').value)
         })
         .catch(err =>{
             alert("Error enrolling")
