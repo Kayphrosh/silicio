@@ -80,3 +80,14 @@ const TypeWriterP = function(txtElementP, wordsP, waitP = 500) {
   }
 
 
+function toggle() {
+    var x = document.querySelector(".enroll-form")
+    if( x.style.display === "block") {
+        x.style.display = "none";
+    }
+    else{
+        x.style.display = "block";
+        x.style.transform = "translateX(-50%)";
+        x.style.transition = "all 1s ease-in"
+    }
+}

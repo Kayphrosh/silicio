@@ -170,12 +170,9 @@ a, a:active, a:hover, a:focus{
     .showcase {
         max-height: 600px;
     }
-    /* .content-img img {
-        max-width: 200px;
-        min-width: 230px;
-    } */
     .nav-container {
-        min-height: 70px;
+        max-height: 70px;
+        background-color: transparent !important;
     }
 }
 @media screen and (max-width: 960px) {
@@ -183,7 +180,7 @@ a, a:active, a:hover, a:focus{
         padding:  0 2rem;;
     }
     .content-text h1 {
-        font-size: 2.1rem;
+        font-size: 2.5rem;
         line-height: 2.5rem;
     }
 }
@@ -275,13 +272,15 @@ a, a:active, a:hover, a:focus{
     }
     .content-text {
         text-align: center;
-        margin-top: 3rem;
+        margin-top: 2.8rem;
         overflow: hidden;
     }
     .content h1 {
-        font-size: 2.1rem;
+        font-family: 'Poppins', sans-serif;
+        font-size: 2.5rem;
+        font-weight: 900;
         text-align: center;
-        line-height: 2.4rem;
+        line-height: 3rem;
         margin-top: 0;
     }
     .content p {
@@ -299,31 +298,6 @@ a, a:active, a:hover, a:focus{
         margin-bottom: 4rem;
     }
 }
-/* .content-footer {
-    display: flex;
-    gap: 30px !important;
-    align-items: center;
-    width: 100%;
-    position: relative;
-    flex-basis: 20%;
-    overflow: hidden;
-}
-.content-footer div {
-    box-shadow: 0px 0px 1px rgba(238, 237, 237, 0.897), 0px 0px 1px rgba(255, 255, 255, 0.911);
-    border-radius: 5px;
-    max-width: 450px;
-    padding: 10px;
-    margin: 2rem 4px;
-}
-.content-footer div h3 { 
-    font-size: 18px;
-}
-.content-footer div p { 
-    font-size: 14px;
-}
-#content-footer-mobile-container {
-    display: none;
-} */
 
 @media screen and (max-width: 760px) {
     #showcase {
@@ -377,6 +351,11 @@ a, a:active, a:hover, a:focus{
     .logo-main img {
         width: 50px;
     }
+    .content h1 {
+        font-size: 2.2rem;
+        line-height: 2.5rem;
+        font-weight: bolder;
+    }
 }
 
 
@@ -394,6 +373,9 @@ a, a:active, a:hover, a:focus{
     flex-direction: column;
     width: 100%;
     max-width: 900px;
+}
+.programming-area-header h2,  .mentors-header  h2, .faq-header h2 {
+    font-size: 26px !important; 
 }
 .programming-area-header p,  .mentors-header p {
     font-family: 'Poppins', sans-serif;
@@ -413,15 +395,19 @@ a, a:active, a:hover, a:focus{
 }
 .scroll-anime {
     width: 3px;
-    height: 100%;
+    height: 100% !important;
     background-color: #f4f4f4;
     margin: 10px 0;
     justify-self: center;
     align-self: center;
 }
 .interval p {
-    font-size: 10px;
-    line-height: 15px;
+
+    margin: auto;
+    background-color: #32ff98;
+    padding: 10px;
+    width: 10px;
+    border-radius: 50%;
     height: fit-content;
     height: max-content;
     overflow: hidden;
@@ -572,10 +558,11 @@ a, a:active, a:hover, a:focus{
 }
 .months-container div {
     display: flex;
+    flex-direction: column;
     justify-content: center;
     position: relative;
     align-items: center;
-    background-color: #10101edc;
+    background-color: #10101edc !important;
     background-image: url(./Images/bg4.jpg) !important;
     background-blend-mode: multiply;
     background-position: center center;
@@ -596,9 +583,13 @@ a, a:active, a:hover, a:focus{
     font-size: 3rem;
     text-align: center;
 }
+.months-container div p {
+    text-align: center;
+    padding: 0 3rem;
+}
 @media screen and (min-width: 800px) {
     .months-container div{
-        width: 70%;
+        width: 50%;
         min-height: 350px;
         /* border-bottom-right-radius: 0rem; */
     }
@@ -942,7 +933,7 @@ a, a:active, a:hover, a:focus{
 }
 .newsletter-form h3 {
     font-family: 'Poppins', sans-serif;
-    margin-bottom: .6rem;
+    margin-bottom: .4rem;
 }
 .newsletter-form p {
     font-family: 'Poppins', sans-serif;
@@ -1129,6 +1120,7 @@ footer {
 }
 .quick-links li a, .contact-us li a {
     color: #08095B;
+    text-transform: lowercase;
 }
 .quick-links button {
     width: 120px;
@@ -1346,17 +1338,27 @@ footer {
     background-color: #10101E;
     color: #f4f4f4;
     flex-basis: 50%;
-    padding: 1rem 2rem;
-    padding-top: 4rem;
+    min-width: 100%;
+    padding: 0rem 2rem;
     border-radius: 30px;
     text-align: center;
     overflow: hidden;
+    height: 100%;
+}
+.enroll-header {
+    margin-bottom: 1rem;
+}
+.enroll-form-div {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 100%;
 }
 .main-form {
     display: flex;
     flex-direction: column;
     text-align: left;
-    margin-top: 1rem;
+    margin-top: auto;
 }
 .main-form div {
     margin-bottom: 1rem;
@@ -1374,7 +1376,7 @@ footer {
     font-size: 16px;
     color: #f6f6f6;
     overflow: hidden;
-    transition: all 0.6s ease-in;
+    transition: 0.6s ease-in;
 }
 .main-form input:hover {
     border-color: #32FF99;
@@ -1421,11 +1423,11 @@ select {
     overflow: hidden;
  }
  .select::after {
-    content: url('https://api.iconify.design/ant-design/down-outlined.svg');
+    content: url('https://api.iconify.design/icon-park/drop-down-list.svg?width=30&height=30');
     position: absolute;
-    top: 0;
+    top: 0%;
     right: 0;
-    padding: 0px 2em;
+    padding: 5px .5em;
     background: #ffffff;
     color: #32FF99;
     cursor:pointer;
@@ -1478,6 +1480,12 @@ select {
 .enroll-logo img {
     width: 100%;
 }
+.enroll-logo .iconify {
+    display: none;
+}
+.enroll-logo-why {
+    display: none;
+}
 .why-silicio {
     flex-basis: 50%;
     display: flex;
@@ -1500,6 +1508,9 @@ select {
     overflow: hidden;
     color: #08095B;
 }
+.enroll-text p {
+    font-family: 'Poppins', sans-serif;
+}
 .enroll-text-btn {
     display: flex;
     justify-content: center;
@@ -1515,7 +1526,7 @@ select {
     border: 2px solid #32FF99;
     box-shadow: 0 0px 6px rgba(90, 90, 90, 0.25), 0 0px 6px rgba(82, 82, 82, 0.25);
     outline: none;
-    color: #fff;
+    color: #02031f;
     font-size: 14px;
     align-items: center;
     text-align: center;
@@ -1527,8 +1538,8 @@ select {
 }
 .enroll-text-btn button:hover {
     background-color: transparent;
-    border-color: #08095B;
-    color: #08095B;
+    border-color: #f4f4f4;
+    color: #f4f4f4;
     transform: scale(0.95);
     transition: .4s ease;
 }
@@ -1541,17 +1552,37 @@ select {
 .enroll-text-btn .next-btn {
     display: none;
     background-color: transparent;
-    color:#08095B;
-    border-color: #08095B;
+    background-color: #32FF99;
+    border: 2px solid #32FF99 ;
     /* box-shadow: none; */
 }
-
+.progress-sign {
+    display: none;
+}
+.full-video {
+    display: none;
+}
 @media screen and (min-width: 966px) {
     .enroll-page-container {
         padding: 2rem;
     }
+    .enroll-form {
+        transform: translateX(0) !important;
+        flex-basis: 50%;
+    }
+    .why-silicio {
+        flex-basis: 50%;
+    }
+    .enroll-form-div {
+        margin: auto;
+    }
     #next-btn {
         display: none;
+    }
+    .enroll-logo {
+        position: absolute !important;
+        top: .5rem;
+        left: .5rem;
     }
 }
 @media screen and (max-width: 960px) {
@@ -1572,16 +1603,19 @@ select {
         border-radius: 0;
         height: 200%;
     }
+    .enroll-form-div {
+        margin: auto;
+    }
     .enroll-page-container {
         background-color: #fff;
-        flex-direction: column-reverse;
+        flex-direction:row-reverse;
         justify-content: center;
-        width: 100%;
+        width: 200%;
         align-items: center;
-        height: 100%;
+        min-height: 100vh;
         border-radius: 0;
         margin: 0;
-        padding: 2rem 1rem !important;
+        padding: 0;
         scroll-behavior: smooth;
         overflow: hidden;
     }
@@ -1593,27 +1627,97 @@ select {
         transform: translateX(-8%) !important;
         transform: translateY(-4%) !important;
         font-size: 3rem;
+
         color: #fff;
     }
     .back-home-btn a {
+        background-color: transparent;
         color: #fff;
     }
     .back-home-btn a:hover {
         color: #32FF99;
     }
     .enroll-form {
+        font-family: 'Poppins', sans-serif;
         display: flex;
         justify-content: center;
-        width: 100%;
-        min-height: 93vh;
+        align-items: center;
+        min-width: 100%;
+        min-height: 100vh;
+        background-color: #fff;
+        color: #02031f;
+        border-radius: 0;
         padding: 0 1rem;
+        margin: 0;
         overflow: hidden;
+        display: none;
+        transition: all 0.4s ease;
+        z-index: 1;
+    }
+    .enroll-form-div {
+        padding: 0 1rem;
+        margin: auto;
+        margin-top: 1rem;
+    }
+    .main-form input:hover {
+        border: 2px solid #08095B;
+    }
+    /* .select::after {
+        display: none;
+    } */
+    .enroll-header {
+        margin-top: 1rem;
+        margin-bottom: 1rem;
     }
     .enroll-logo {
-        top: 53%;
-        left: 0%;
-        transform: translateY(-53%);
+        display: flex;
+        justify-self: center;
+        width: 100%;
+        justify-content: space-between;
+        position: relative;
         background-color: #fff;
+        margin-left: -10px;
+        margin-top: .5rem;
+        padding: 10px 0 !important;
+        box-shadow: -2px -1px 35px -15px rgba(0,0,0,0.75);
+        -webkit-box-shadow: -2px -1px 35px -15px rgba(0,0,0,0.75);
+        -moz-box-shadow: -2px -1px 35px -15px rgba(0,0,0,0.75);
+    }
+    .enroll-logo img {
+        position: relative;
+        width: 40px;
+        margin-right: 1.5rem;
+    }
+    .enroll-logo .iconify {
+        display: block;
+        font-size: 2.4rem;
+        color: #08095be1;
+        margin-left: 1.5rem;
+    }
+    .enroll-logo-why {
+        position: absolute;
+        background-color: transparent;
+        width: 90%;
+        left: 45%;
+        transform: translateX(-42.5%);
+        padding: 0;
+    }
+    .enroll-logo-why img{
+        display: none;
+    }
+    .enroll-logo-why .iconify {
+        color: #fff;
+        font-size: 3rem;
+        margin-left: 0;
+    }
+    .enroll-btn {
+        padding: 15px 5rem;
+        background-color: #32FF99;
+        border: 2px solid #32FF99;
+        margin-top: 0;
+    }
+    .enroll-btn:hover {
+        color: #02031f;
     }
     .silico-name {
         display: block;
@@ -1633,118 +1737,149 @@ select {
 
     }
     .why-silicio {
-        background-image: url(./Images/Frame\ 3.png);
-        background-color: #ffffff;
+        background: url(./Images/bg.jpg) no-repeat center center / cover;
+        background-color: rgba(22, 22, 22, 0.918);
         background-blend-mode: multiply;
-        background-position: center/center;
-        background-size: cover;
-        background-repeat: no-repeat;
         display: flex;
         justify-content: center;
-        width: 100%;
+        min-width: 100%;
         min-height: 100vh;
         padding: 1rem 0em !important;
         overflow: hidden;
         text-align: center;
+        color: #f4f4f4 !important;
     }
     .why-silicio-qoute {
+        display: none;
         height: fit-content;
         min-width: 99%;
         overflow: hidden;
     }
     .why-silicio-qoute img {
+
         width: 100%;
         object-fit: cover;
         object-position: center;
     }
+    .enroll-text {
+        font-family: 'Poppins', sans-serif;
+        color: #ffffff;
+    }
+    .enroll-text h2 {
+        font-weight: 800;
+        overflow: hidden;
+        margin-bottom: 1rem;
+    }
+    .silicio {
+        background-color: #32ff9886;
+        border-radius: 5px;
+        padding: 4px 1rem;
+        color: #08095B;
+    }
+    .enroll-text-p{
+        font-size: 16px;
+        font-weight: 500;
+        margin-bottom: 2rem;
+    }
     .enroll-text-btn .next-btn {
         display: block;
+        width: 100%;
+        padding: 15px;
+        margin: 0 1rem;
+        margin-top: 1rem;
     }
-    
-
-
-    .mouse {
-        display: flex;
-        justify-self: center;
-        margin: auto;
-        margin-top: 2rem;
-        width: 35px;
-        height: 70px;
-        border: 3px solid #08095B;
-        border-radius: 60px;
-        position: relative;
-        overflow: hidden;
-    }
-    .mouse::before {
-        content: '';
-        width: 10px;
-        height: 10px;
-        position: absolute;
-        top: 10px;
-        left: 50%;
-        transform: translateX(-50%);
-        background-color: #08095B;
-        border-radius: 50%;
-        opacity: 1;
-        animation: wheel 2s infinite;
-        -webkit-animation: wheel 2s infinite;
-    }
-    @keyframes wheel {
-        to {
-            opacity: 0;
-            top: 60px;
-        }
-    }
-    
-    @-webkit-keyframes wheel {
-        to {
-            opacity: 0;
-            top: 60px;
-        }
-    }
-
-
-    /* .enroll-steps {
+    .enroll-text-btn .previous-btn {
         display: none;
     }
-    .enroll-steps.active-step {
+    .enroll-text .home-btn {
+        background-color: transparent;
+        color: #f4f4f4;
+    }
+    .progress-sign {
         display: flex;
+        justify-content: space-between;
+        margin: auto;
+        width: 160px;
+        margin-top: 1rem;
     }
-    #next-btn {
-        display: block;
-    } */
+    .progress {
+        background-color: #ffffff;
+        width: 40px;
+        height: 5px;
+        border-radius: 0px;
+    }
+    .progress-apply .progress{
+        background-color: #0000002a;
+    }
+    .progress.progress-1 {
+        width: 70px;
+        background-color: #32ff98;
+    }
 }
-/* @media screen and (max-width: 380px) {
-    .enroll-page-container {
-        padding: 1rem;
+.successful-sign-up {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    color: #02031f;
+    text-align: center;
+    padding: 0 2rem;
+    background-color: #fff;
+    width: 40%;
+    max-width: 100%;
+    min-height: 580px;
+    margin: auto;
+    box-shadow: 0 14px 28px rgba(95, 95, 95, 0.25), 0 10px 10px rgba(122, 122, 122, 0.25);
+    padding: 2rem 1rem;
+    overflow: hidden;
+}
+.success-header {
+    margin-bottom: 2rem;
+}
+.success-p {
+    margin-top: 2rem;
+}
+.success-img {
+    width: 100%;
+}
+.success-img img{
+    max-width: 250px;
+}
+.successful-sign-up button {
+    padding: 15px;
+    width: 90%;
+    margin: 2rem;
+    background-color: #32FF99;
+    border: 2px solid #32FF99;
+    border-radius: 5px;        box-shadow: -2px -1px 35px -15px rgba(0,0,0,0.75);
+    -webkit-box-shadow: -2px -1px 35px -15px rgba(0,0,0,0.75);
+    -moz-box-shadow: -2px -1px 35px -15px rgba(0,0,0,0.75);box-shadow: 0 0px 6px rgba(90, 90, 90, 0.25), 0 0px 6px rgba(82, 82, 82, 0.25);
+    outline: none;
+    color: #02031f;
+    font-size: 14px;
+    align-items: center;
+    text-align: center;
+    border-radius: 5px;
+    font-weight: 800;
+}
+.successful-sign-up button:hover {
+    background-color: transparent;
+    border-color: #32ff98;
+    transform: scale(0.95);
+    transition: .4s ease;
+} 
+@media screen and (max-width: 768px) {
+    .successful-sign-up {
+        font-family: 'Poppins', sans-serif;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        min-width: 100%;
+        height: 100vh;
+        background-color: #fff;
+        color: #02031f;
+        border-radius: 0;
+        padding: 2rem 1rem;
+        margin: 0;
+        overflow: hidden;
     }
-    .enroll-logo {
-        width: 75px;
-        top: .5rem;
-    }
-    .back-home-btn {
-        top: 4rem;
-    }
-} */
-/* @media screen and (min-height: 8860px) {
-    .enroll-page-container {
-        padding: 4rem 1rem;
-    }   
-    .silico-name {
-        bottom: 2rem;
-    }
-    .enroll-logo {
-        top: 2.8rem;
-    }
-} */
-/* @media screen and (max-height: 580px) {
-    .main-form div {
-        margin-bottom: .5rem;
-    }
-    .main-form p {
-        font-size: 10px;
-    }
-    .enroll-btn {
-        margin-top: .5rem;
-    }
-} */
+}

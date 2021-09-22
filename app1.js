@@ -111,7 +111,7 @@ let toggleNav = function() {
     let getNavbars = document.querySelector(".nav-active-bottom")
     let getNavbarLinks = document.querySelectorAll(".nav-bar a")
     let getLogo = document.querySelector(".logo-main")
-    if (toggleNavstatus === false) {
+    if (window.innerWidth > 768 || toggleNavstatus === false) {
         getNavbar.style.visibility = "visible";
         getNavbars.style.visibility = "visible";
         getNavbar.style.display = "block"

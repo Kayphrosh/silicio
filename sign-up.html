@@ -7,73 +7,81 @@
     <link rel="icon" href="/Images/logo2.png" type="image/png">
     <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css"/>
     <link rel="stylesheet" href="style.css"/>
-    <title>SILICIO | ENROLL</title>
+    <title>Silicio | Enroll</title>
 </head>
 <body class="enroll noSelect">
     <section class="enroll-page-container">
         <section class="enroll-form" id="enroll-form">
             <div class="enroll-logo">
+                <span class="iconify" data-icon="eva:arrow-ios-back-outline"></span>
                 <img src="./Images/logo3.png" alt="">
             </div>
-            <!-- <div class="back-home-btn">
-                <a href="index.html"><span class="iconify previous-btn" data-icon="bx:bx-arrow-back"></span></a>
-            </div> -->
-            <div class="enroll-header">
-                <h2>Enroll Page.</h2>
-                <p>Let Us Have Some Your Information To Get Us Started.</p>
             </div>
-            <form action="https://silicio.herokuapp.com/waitings/add" method="POST" class="main-form" autocomplete="off" id="form">
-                <div>
-                    <p>Your Full Name</p>
-                    <input type="text" placeholder="enter your full name" id="name" name="name" required>
+            <div class="enroll-form-div">
+                <div class="enroll-header">
+                    <h2>Sign Up.</h2>
+                    <p>Let Us Have Some Of Your Information To Get Us Started.</p>
                 </div>
-                <div>
-                    <p>Email Address</p>
-                    <input type="email" name="email" id="email" placeholder=" enter your email address" required>
+                <form action="https://silicio.herokuapp.com/waitings/add" method="POST" class="main-form" autocomplete="off" id="form">
+                    <div>
+                        <p>Your Full Name</p>
+                        <input type="text" placeholder="enter your full name" id="name" name="name" required>
+                    </div>
+                    <div>
+                        <p>Email Address</p>
+                        <input type="email" name="email" id="email" placeholder=" enter your email address" required>
+                    </div>
+                    <div>
+                        <p>Phone Number</p>
+                        <input type="tel" name="phone" id="phone" placeholder="+24380....." required>
+                    </div>
+                    <div class="select">
+                        <select name="course" id="format" required>
+                           <option selected disabled>choose the skill you're interested in <span style="color: blue;" class="iconify" data-icon="icon-park:drop-down-list"></span></option>
+                           <option value="Data Science">Data Science</option>
+                           <option value="UI/UX">UI/UX</option>
+                           <option value="Frontend">Frontend</option>
+                           <option value="Backend">Backend</option>
+                           <option value="Mobile App Developent">Mobile App Developent</option>
+                           <option value="mobi">Graphics Design</option>
+                        </select>
+                     </div>
+                     <div class="progress-sign progress-apply">
+                        <div class="progress progress-2"></div>
+                        <div class="progress progress-1"></div>
+                        <div class="progress progress-3"></div>
+                    </div>
+                    <button class="enroll-btn">Apply Now</button>
+                </form>
+                <div class="disclaimer">
+                    <p>disclaimer: all your important information and data are completely digital and safe.</p>
                 </div>
-                <div>
-                    <p>Phone Number</p>
-                    <input type="tel" name="phone" id="phone" placeholder="+24380....." required>
-                </div>
-                <div class="select">
-                    <select name="course" id="format" required>
-                       <option selected disabled>Kindly choose the Skill you're Interested in</option>
-                       <option value="Data Science">Data Science</option>
-                       <option value="UI/UX">UI/UX</option>
-                       <option value="Frontend">Frontend</option>
-                       <option value="Backend">Backend</option>
-                       <option value="Mobile App Developent">Mobile App Developent</option>
-                       <option value="mobi">Graphics Design</option>
-                    </select>
-                 </div>
-                <!-- <div>
-                    <p></p>
-                    <input type="text">
-                
-                </div> -->
-                <button class="enroll-btn">Enroll Now</button>
-            </form>
-            <div class="disclaimer">
-                <p>disclaimer: all your important information and data are completely digital and safe.</p>
             </div>
-            <div class="silico-name">
-                <img src="./Images/tm.png" alt="">
-            </div>
+            
         </section>
 
         <section class="why-silicio">
+            <div class="enroll-logo enroll-logo-why">
+                <span class="iconify" data-icon="eva:arrow-ios-back-outline"></span>
+                <img src="./Images/logo3.png" alt="">
+            </div>
             <div class="why-silicio-qoute">
                 <img src="./Images/silicio1.png" alt="">
             </div>
             <div class="enroll-text">
-                <h2>Hello...</h2>
-                <p>We're kicking off with physical classes on major digital skills to enhance, teach and network with one another in the world of science and technology.</p>
+                <h2>Start Your Journey In World Of Tech With <span class="silicio"> Silicio.</span></h2>
+                <p class="enroll-text-p">We're kicking off with physical classes on major digital skills to enhance, teach and network with one another in the world of science and technology.</p>
+                <div class="progress-sign">
+                    <div class="progress progress-1"></div>
+                    <div class="progress progress-2"></div>
+                    <div class="progress progress-3"></div>
+                </div>
                 <div class="enroll-text-btn">
                     <button type="button" onclick="location.href='index.html'" class="home-btn previous-btn"><span class="iconify" data-icon="bx:bx-arrow-back"></span><p>Back</p> </button>
-                    <button type="button" onclick="location.href='sign-up.html#enroll-form'" class="home-btn next-btn">Continue</button>
+                    <button type="button" onclick="toggle()"  class=" next-btn">Continue</button>
                 </div>
-                <div class="mouse"></div>
-      </div>
+
+            </div>
             </div>
         </section>
     </section>
