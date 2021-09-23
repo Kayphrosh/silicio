@@ -785,10 +785,11 @@ a, a:active, a:hover, a:focus{
     padding: 20px 20px;
     background-color: #96e9bf;
     border-radius: 5px;
+    transition: .4s ease;
 }
 .each-faq-header:hover {
     background-color: #96e9c050;
-    transition: all 0.2s;
+    transition: all 0.2s ease;
     transform: scale(1.01);
 
 }
@@ -802,6 +803,7 @@ a, a:active, a:hover, a:focus{
 }
 .faq-active .faq-answer{
     border-top: 2px solid #ffffff40;
+    transition: 0.4s ease-in-out;
 } 
 .faq-answer {
     display: none;
@@ -814,6 +816,7 @@ a, a:active, a:hover, a:focus{
 .each-faq-header.faq-active .faq-answer {
     display: block;
     padding-top: 10px;
+    transition: .8s ease;
 }
 .each-faq-header button {
     display: flex;
@@ -826,6 +829,7 @@ a, a:active, a:hover, a:focus{
     outline: none;
     border: none;
     cursor: pointer;
+    transition:  0.25s ease;
 }
 .faq-toggle .faq-close{
     display: none;
@@ -835,6 +839,7 @@ a, a:active, a:hover, a:focus{
 }
  .faq-active .faq-toggle .faq-open{
     display: none;
+    transition: .8s ease;
 }
 
 .faq-toggle .faq-close {
@@ -845,7 +850,7 @@ a, a:active, a:hover, a:focus{
 
 }
 .each-faq-header .iconify {
-    font-size: 1.8rem;
+    font-size: 1.4rem;
     color: #02031f;
     opacity: 0.9;
 }
@@ -921,7 +926,7 @@ a, a:active, a:hover, a:focus{
 .newsletter {
     display: flex;
     justify-content: center;
-    background-color: #000000;
+    background-color: #02031f;
     color: #f4f4f4;
     padding: 4rem 20px;
     border-top-right-radius: 6rem;
@@ -1188,7 +1193,7 @@ footer {
     }
     .footer-text {
         flex-basis: 50%;
-        margin: auto;
+        /* margin: auto; */
     }
     .footer-img {
         width: 100%;
@@ -2004,15 +2009,23 @@ select {
 .success-footer .progress-sign {
     display: flex;
 }
+.contact-us-success {
+    display: flex;
+    align-items: center;
+    text-align: center;
+    width: 100%;
+}
 .contact-us.contact-us-success p {
     font-size: 12px;
     font-weight: 600;
+    text-align: center;
 }
 .contact-us.contact-us-success div {
     display: flex;
     justify-content: center;
     align-items: center;
     margin-top: .4rem;
+    text-align: center;
 }
 .successful-sign-up button {
     padding: 12px;
