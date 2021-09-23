@@ -355,7 +355,7 @@ a, a:active, a:hover, a:focus{
         padding: 0;
     }
     .hamburger {
-        top: -5px;
+        top: -10px;
     }
     .burger {
         font-size: 3rem;
@@ -1669,6 +1669,9 @@ select {
         padding: 0 1rem;
         margin: auto;
         margin-top: 1rem;
+    }
+    .main-form input {
+        color: #08095B;
     }
     .main-form input:hover {
         border: 2px solid #08095B;
