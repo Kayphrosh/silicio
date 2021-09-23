@@ -226,7 +226,7 @@ a, a:active, a:hover, a:focus{
     .logo-main {
         right: 8px;
         top: 50%;
-        transform: translateY(-40%);
+        transform: translateY(-50%);
     }
     .logo-main img {
         width: 60px;
@@ -345,10 +345,20 @@ a, a:active, a:hover, a:focus{
     .logo-main img {
         width: 50px;
     }
+    .showcase {
+        padding: 10px;
+    }
     .content h1 {
         font-size: 2.2rem;
-        line-height: 2.5rem;
+        line-height: default;
         font-weight: bolder;
+        padding: 0;
+    }
+    .hamburger {
+        top: -5px;
+    }
+    .burger {
+        font-size: 3rem;
     }
 }
 
