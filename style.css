@@ -1819,10 +1819,11 @@ select {
         border-radius: 5px;
         padding: 3px 1rem;
         color: #08095B;
+       line-height: 3.5rem;
     }
     .enroll-text-p{
         font-size: 16px;
-        font-weight: 500;
+        font-weight: 400;
         margin-bottom: 2rem;
         position: absolute;
         left: 0;
@@ -1937,7 +1938,8 @@ select {
 }
 @media screen and (max-width: 450px) {
     .enroll-text-p{
-        padding: 1rem 1.5rem ;
+        padding: 1rem 1.5rem;
+        font-weight: 400;
     }
     
 }
