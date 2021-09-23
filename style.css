@@ -163,7 +163,7 @@ a, a:active, a:hover, a:focus{
 }
 @media screen and (min-width: 970px) {
     .showcase {
-        min-height: 600px !important;
+        min-height: 640px !important;
     }
     .nav-container {
         max-height: 70px;
@@ -849,8 +849,8 @@ a, a:active, a:hover, a:focus{
 
 }
 .each-faq-header .iconify {
-    font-size: 1.8rem;
-    color: #08095B;
+    font-size: 1.5rem;
+    color: #a9a9bd;
     opacity: 0.7;
 }
 @media screen and (min-width: 960px) {
@@ -1217,6 +1217,7 @@ footer {
         padding-bottom: 40px;
      }
      .footer-text {
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
         flex-direction: column;
         align-items: center;
         margin: 0;
@@ -1231,6 +1232,9 @@ footer {
     }
     .logo img {
         max-width: 150px !important;
+    }
+    .all-rights {
+        margin-bottom: 1rem;
     }
 
 }
