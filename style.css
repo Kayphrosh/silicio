@@ -245,12 +245,18 @@ a, a:active, a:hover, a:focus{
         height: 3px;
         background: #08095B;
         margin: 7px;
+        transition: 0.25s ease;
+    }
+    .line1 {
+        /* transform: rotate(0deg) !important; */
     }
     .line2 {
         width: 35px;
+        /* transform: rotate(0deg) !important; */
     }
     .line3 {
         width: 30px;
+        /* transform: rotate(0deg) !important; */
     }
 
     .hamburger {
@@ -1312,6 +1318,7 @@ footer {
 }
 .enroll-page-container {
     display: flex;
+    flex-direction: row;
     justify-content: center;
     justify-self: center;
     align-self: center;
@@ -1323,7 +1330,7 @@ footer {
     box-shadow: 0 14px 28px rgba(95, 95, 95, 0.25), 0 10px 10px rgba(122, 122, 122, 0.25);
     border-radius: 20px;
     padding: 1rem;
-    /* overflow: hidden; */
+    overflow: hidden;
     position: relative;
 }
 .enroll-header p {
@@ -1338,7 +1345,7 @@ footer {
     background-color: #10101E;
     color: #f4f4f4;
     flex-basis: 50%;
-    min-width: 100%;
+    width: 100%;
     padding: 0rem 2rem;
     border-radius: 30px;
     text-align: center;
@@ -1457,10 +1464,9 @@ select {
     transition: .4s ease;
 }
 .disclaimer {
-    margin-top: 1rem;
+    margin-top: 0.2rem;
 }
 .disclaimer p {
-
     font-size: 12px;
 }
 .silico-name {
@@ -1487,6 +1493,7 @@ select {
     display: none;
 }
 .why-silicio {
+    background: none;
     flex-basis: 50%;
     display: flex;
     flex-direction: column;
@@ -1494,9 +1501,13 @@ select {
     color: #02031f;
     text-align: center;
     padding: 0 2rem;
+    display: block;
+    overflow: hidden;
+    margin: auto;
 }
 .why-silicio-qoute {
     width: 100%;
+    margin-top: 2rem;
 }
 .why-silicio-qoute img {
     object-fit: cover;
@@ -1530,8 +1541,8 @@ select {
     font-size: 14px;
     align-items: center;
     text-align: center;
-    width: 140px;
-    padding: 5px;
+    width: 240px;
+    padding: 10px;
     margin: 5px;
     border-radius: 5px;
     font-weight: 800;
@@ -1559,8 +1570,10 @@ select {
 .progress-sign {
     display: none;
 }
-.full-video {
+.slider-container {
     display: none;
+    position: relative;
+    overflow: hidden;
 }
 @media screen and (min-width: 966px) {
     .enroll-page-container {
@@ -1688,6 +1701,12 @@ select {
         width: 40px;
         margin-right: 1.5rem;
     }
+    .enroll-logo button {
+        background: none;
+        border: none;
+        outline: none;
+        cursor: pointer;
+    }
     .enroll-logo .iconify {
         display: block;
         font-size: 2.4rem;
@@ -1701,6 +1720,13 @@ select {
         left: 45%;
         transform: translateX(-42.5%);
         padding: 0;
+        z-index: 111;
+    }
+    .enroll-logo-why button {
+        background: none;
+        border: none;
+        outline: none;
+        cursor: pointer;
     }
     .enroll-logo-why img{
         display: none;
@@ -1709,15 +1735,30 @@ select {
         color: #fff;
         font-size: 3rem;
         margin-left: 0;
+        cursor: pointer;
+    }
+    .enroll-btn-div {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        margin: 1rem 0;
     }
     .enroll-btn {
-        padding: 15px 5rem;
+        padding: 12px 7rem;
         background-color: #32FF99;
         border: 2px solid #32FF99;
-        margin-top: 0;
+        margin: 10px auto;
+        cursor: pointer;
+        box-shadow: -2px -1px 35px -15px rgba(0,0,0,0.75);
+        -webkit-box-shadow: -2px -1px 35px -15px rgba(0,0,0,0.75);
+        -moz-box-shadow: -2px -1px 35px -15px rgba(0,0,0,0.75);
     }
     .enroll-btn:hover {
+        transform: translate(0.96);
         color: #02031f;
+    }
+    .enroll-btn-div .progress-sign {
+        margin: 0 auto;
     }
     .silico-name {
         display: block;
@@ -1737,17 +1778,19 @@ select {
 
     }
     .why-silicio {
-        background: url(./Images/bg.jpg) no-repeat center center / cover;
+        /* background: url(./Images/bg.jpg) no-repeat center center / cover;
         background-color: rgba(22, 22, 22, 0.918);
-        background-blend-mode: multiply;
+        background-blend-mode: multiply; */
         display: flex;
         justify-content: center;
         min-width: 100%;
         min-height: 100vh;
-        padding: 1rem 0em !important;
+        padding: 0rem 0em !important;
+        margin: auto;
         overflow: hidden;
-        text-align: center;
+        /* text-align: center; */
         color: #f4f4f4 !important;
+        position: relative;
     }
     .why-silicio-qoute {
         display: none;
@@ -1762,6 +1805,11 @@ select {
         object-position: center;
     }
     .enroll-text {
+        display: none;
+        flex-direction: column;
+        height: 100%;
+        flex-basis: 50%;
+        margin-top: auto;
         font-family: 'Poppins', sans-serif;
         color: #ffffff;
     }
@@ -1771,9 +1819,9 @@ select {
         margin-bottom: 1rem;
     }
     .silicio {
-        background-color: #32ff9886;
+        background-color: #32ff98;
         border-radius: 5px;
-        padding: 4px 1rem;
+        padding: 3px 1rem;
         color: #08095B;
     }
     .enroll-text-p{
@@ -1781,12 +1829,23 @@ select {
         font-weight: 500;
         margin-bottom: 2rem;
     }
+
+
+    .enroll-text-btn {
+        position: relative;
+        display: none;
+        flex-direction: column;
+        height: 100%;
+        flex-basis: 50%;
+    }
     .enroll-text-btn .next-btn {
         display: block;
-        width: 100%;
-        padding: 15px;
-        margin: 0 1rem;
-        margin-top: 1rem;
+        width: 80%;
+        padding: 12px;
+        margin: 0 auto;
+        margin-top: 1.5rem;
+        box-shadow: 0 14px 28px rgba(95, 95, 95, 0.25), 0 10px 10px rgba(122, 122, 122, 0.25);
+        cursor: pointer;
     }
     .enroll-text-btn .previous-btn {
         display: none;
@@ -1798,14 +1857,15 @@ select {
     .progress-sign {
         display: flex;
         justify-content: space-between;
-        margin: auto;
-        width: 160px;
+        margin: 0 auto;
         margin-top: 1rem;
+        width: 160px;
+        max-height: 3;   
     }
     .progress {
         background-color: #ffffff;
         width: 40px;
-        height: 5px;
+        height: 3px;
         border-radius: 0px;
     }
     .progress-apply .progress{
@@ -1814,6 +1874,68 @@ select {
     .progress.progress-1 {
         width: 70px;
         background-color: #32ff98;
+    }
+
+    .why-silicio-slider {
+        display: block;
+    }
+    .slider-container {
+        display: flex;
+        justify-content: center;
+        min-width: 100%;
+        height: 100vh;
+    }
+    .enroll-text.enroll-text-slider {
+        display: block;
+    }
+    .slides-content {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        padding: 0 1rem;
+        align-items: center;
+        position: absolute;
+        left: 0%;
+        top: 0;
+        height: 100vh;
+        width: 100%;
+        color: #f4f4f4;
+    }
+    .slides-content-main {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        height: 100%;
+        position: relative;
+        margin: auto;
+        
+    }
+    .slide{
+        display: flex;
+        opacity: 0;
+        min-height: 100vh;
+        min-width: 100vw;
+        /* border-radius: 20px; */
+        background-color: rgba(112, 85, 85, 0.7);
+        background-blend-mode: multiply;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        position: absolute;
+        top: 0;
+        left: 0;
+        transition: 0.4s ease;
+    }
+    .slide.active {
+        opacity: 1;
+    }
+    .enroll-text-btn.enroll-btn-slider {
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-end;
+        /* height: 100%; */
+        width: 100%;
+        margin-bottom: 2rem;
     }
 }
 .successful-sign-up {
@@ -1868,6 +1990,7 @@ select {
     transition: .4s ease;
 } 
 @media screen and (max-width: 768px) {
+
     .successful-sign-up {
         font-family: 'Poppins', sans-serif;
         display: flex;

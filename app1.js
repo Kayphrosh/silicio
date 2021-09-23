@@ -111,6 +111,9 @@ let toggleNav = function() {
     let getNavbars = document.querySelector(".nav-active-bottom")
     let getNavbarLinks = document.querySelectorAll(".nav-bar a")
     let getLogo = document.querySelector(".logo-main")
+    const getLine1 = document.querySelector('.line.line1')
+    const getLine2 = document.querySelector('.line.line2')
+    const getLine3 = document.querySelector('.line.line3')
     if (window.innerWidth > 768 || toggleNavstatus === false) {
         getNavbar.style.visibility = "visible";
         getNavbars.style.visibility = "visible";
@@ -121,9 +124,17 @@ let toggleNav = function() {
         getNavcontainer.style.paddingTop = "2rem"
         getNavcontainer.style.overflow = "hidden"
         getLogo.style.top = "2.2rem"
+        getLine1.style.transform = "rotate(-45deg)"
+        getLine3.style.transform = "rotate(45deg)"
+        getLine3.style.width = "40px"
+        getLine2.style.display = "none"
         toggleNavstatus = true;
     }
     else if (toggleNavstatus === true) {
+        getLine1.style.transform = "rotate(0deg) !important";
+        getLine3.style.transform = "rotate(0deg) !important";
+        getLine3.style.width = "30px !important";
+        getLine2.style.display = "block !important";
         getNavbar.style.visibility = "hidden";
         getNavbars.style.visibility = "hidden";
         getNavbar.style.display = "none"
@@ -132,7 +143,7 @@ let toggleNav = function() {
         getNavcontainer.style.background = "transparent";
         getNavcontainer.style.paddingTop = "0rem"
         toggleNavstatus = false;
-        getNavbarLinks.style.display = "block"
+        getNavbarLinks.style.display = "block";
     }
 }
 

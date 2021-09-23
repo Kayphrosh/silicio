@@ -91,3 +91,48 @@ function toggle() {
         x.style.transition = "all 1s ease-in"
     }
 }
+
+
+
+
+const body = document.querySelector('.showcase');
+const slides = document.querySelectorAll('.slide');
+
+
+
+let activeSlide = 0
+let interval = setInterval(run, 2000)
+
+
+function run(){
+    activeSlide++
+    changeImage()
+    resetInterval()
+}
+function changeImage() {
+    if(activeSlide > slides.length - 1) {
+        activeSlide = 0
+    }
+    else if (activeSlide < 0) {
+        activeSlide = slides.length - 1
+
+    }
+    setBgToBody()
+    setActiveSlide()
+    resetInterval()
+}
+
+
+function resetInterval(){
+    clearInterval(interval)
+    interval = setInterval(run, 2000)
+}
+function setBgToBody(){
+    body.style.backgroundColor = slides[activeSlide].style.backgroundImage
+}
+
+function setActiveSlide(){
+    slides.forEach((slide) => slide.classList.remove('active'))
+    slides[activeSlide].classList.add('active')
+}
+

@@ -13,7 +13,10 @@
     <section class="enroll-page-container">
         <section class="enroll-form" id="enroll-form">
             <div class="enroll-logo">
-                <span class="iconify" data-icon="eva:arrow-ios-back-outline"></span>
+                <button onclick="location.href='sign-up.html'"> 
+                    <span class="iconify" data-icon="eva:arrow-ios-back-outline"></span>
+                </button>
+
                 <img src="./Images/logo3.png" alt="">
             </div>
             </div>
@@ -45,13 +48,15 @@
                            <option value="Mobile App Developent">Mobile App Developent</option>
                            <option value="mobi">Graphics Design</option>
                         </select>
-                     </div>
-                     <div class="progress-sign progress-apply">
-                        <div class="progress progress-2"></div>
-                        <div class="progress progress-1"></div>
-                        <div class="progress progress-3"></div>
                     </div>
-                    <button class="enroll-btn">Apply Now</button>
+                    <div class="enroll-btn-div">
+                        <div class="progress-sign progress-apply">
+                            <div class="progress progress-2"></div>
+                            <div class="progress progress-1"></div>
+                            <div class="progress progress-3"></div>
+                        </div>
+                        <button class="enroll-btn">Apply Now</button>
+                    </div>
                 </form>
                 <div class="disclaimer">
                     <p>disclaimer: all your important information and data are completely digital and safe.</p>
@@ -60,29 +65,71 @@
             
         </section>
 
-        <section class="why-silicio">
-            <div class="enroll-logo enroll-logo-why">
-                <span class="iconify" data-icon="eva:arrow-ios-back-outline"></span>
-                <img src="./Images/logo3.png" alt="">
+        <section class="why-silicio showcase" id="why">
+            <div class="slider-container  why-silicio-slider">
+                <div class="slide active" style="background-image: url(./Images/bg.jpg);background-color: rgba(20, 20, 20, 0.856);">
+                    
+                </div>
+                <div class="slide" style="background-image: url(./Images/bg1.jpg); background-color: rgba(141, 141, 141, 0.7);">
+                    
+                </div>
+                <div class="slide" style=" background-image: url(./Images/bg2.jpg); background-color: rgba(10, 0, 0, 0.856);">
+                    
+                </div>
+            
+                <div class="slide" style=" background-image: url(Images/bg3.jpg); background-color: rgba(0, 0, 0, 0.7);">
+                    
+                </div>
+                <div class="slides-content">
+                    <div class="enroll-logo enroll-logo-why">
+                        <button onclick="location.href='index.html'"> 
+                            <span class="iconify" data-icon="eva:arrow-ios-back-outline"></span>
+                        </button>
+
+                        <img src="./Images/logo3.png" alt="">
+                    </div>
+                    <div class="why-silicio-qoute">
+                        <img src="./Images/silicio1.png" alt="">
+                    </div>
+                    <div class="slides-content-main">
+                        <div class="enroll-text enroll-text-slider">
+                            <h2>Start Your Journey In World Of Tech With <span class="silicio"> Silicio.</span></h2>
+                            <p class="enroll-text-p">We're kicking off with physical classes on major digital skills to enhance, teach and network with one another in the world of science and technology.</p>
+                        </div>
+                    </div>
+                    <div class="enroll-text-btn enroll-btn-slider">
+                        <div>
+                            <div class="progress-sign">
+                                <div class="progress progress-1"></div>
+                                <div class="progress progress-2"></div>
+                                <div class="progress progress-3"></div>
+                            </div>
+                            <button type="button" onclick="location.href='index.html'" class="home-btn previous-btn"><span class="iconify" data-icon="bx:bx-arrow-back"></span><p>Back</p> </button>
+                            <button type="button" onclick="toggle()"  class=" next-btn">Continue</button>
+                        </div>
+
+                    </div>
+                </div>
+
             </div>
+
             <div class="why-silicio-qoute">
                 <img src="./Images/silicio1.png" alt="">
             </div>
             <div class="enroll-text">
                 <h2>Start Your Journey In World Of Tech With <span class="silicio"> Silicio.</span></h2>
                 <p class="enroll-text-p">We're kicking off with physical classes on major digital skills to enhance, teach and network with one another in the world of science and technology.</p>
+            </div>
+            <div class="enroll-text-btn">
                 <div class="progress-sign">
                     <div class="progress progress-1"></div>
                     <div class="progress progress-2"></div>
                     <div class="progress progress-3"></div>
                 </div>
-                <div class="enroll-text-btn">
-                    <button type="button" onclick="location.href='index.html'" class="home-btn previous-btn"><span class="iconify" data-icon="bx:bx-arrow-back"></span><p>Back</p> </button>
-                    <button type="button" onclick="toggle()"  class=" next-btn">Continue</button>
-                </div>
-
+                <button type="button" onclick="location.href='index.html'" class="home-btn previous-btn"><span class="iconify" data-icon="bx:bx-arrow-back"></span><p>Back</p> </button>
+                <button type="button" onclick="toggle()"  class=" next-btn">Continue</button>
             </div>
-            </div>
+            
         </section>
     </section>
 
