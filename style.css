@@ -86,7 +86,7 @@ a, a:active, a:hover, a:focus{
     font-weight: 500;
 }
 .nav-bar li a:hover {
-    color: #bb86fc;
+    color: #32ff98;
 }
 .logo-main {
    position: absolute;
@@ -251,6 +251,9 @@ a, a:active, a:hover, a:focus{
     .burger {
         font-size: 4rem;
         color: #08095B;
+    }
+    .burger:hover {
+        color: #32ff98;
     }
     .content {
         display: flex;
