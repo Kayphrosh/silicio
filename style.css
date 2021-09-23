@@ -101,7 +101,7 @@ a, a:active, a:hover, a:focus{
     display: flex;
     flex-direction: row;
     justify-content: center;
-    text-align: center;
+    text-align: left;
     align-items: center;
     width: 100%;
     overflow: hidden;
@@ -261,6 +261,7 @@ a, a:active, a:hover, a:focus{
         flex-direction: column;
         align-content: center;
         align-items: center;
+        text-align: center;
         padding: 8px;
     }
     .content-text {
@@ -365,7 +366,7 @@ a, a:active, a:hover, a:focus{
 .programming-areas-container {
     display: flex;
     flex-direction: column;
-    background-color: #000000;
+    background-color: #02031f;
     color: #f4f4f4;
     padding: 0 4rem;
     margin: 4rem 0;
@@ -431,12 +432,10 @@ a, a:active, a:hover, a:focus{
     margin: 10px 10px;
     border-radius: 5px;
     position: relative;
-    background-color:   #ffffff28;
-    /* background-color:   #6e75b921; */
+    background-color:   #ffffff15;
 }
 .program:hover {
-    background-color: #2c4bff33;
-    background-color:   #6e75b960;
+    background-color:   #ffffff3b;
     transition: 0.2s ease-in;
     transform: scale(1.01) !important;
 }
@@ -574,8 +573,6 @@ a, a:active, a:hover, a:focus{
     height: 100%;
     min-height: 400px;
     color: #f6f6f6;
-    border-top-right-radius: 2rem;
-    border-bottom-left-radius: 2rem;
     text-align: right;
     margin-left: auto;
     margin-top: 10px;
@@ -609,10 +606,6 @@ a, a:active, a:hover, a:focus{
     .months-container div h1 {
         padding: 0 10px;
         font-size: 2rem;
-    }
-    .months-container div {
-        border-top-right-radius: 1rem;
-        border-bottom-left-radius: 1rem;
     }
     .months-container div p {
         padding: 0 1.5rem;
@@ -827,7 +820,7 @@ a, a:active, a:hover, a:focus{
     justify-content: center;
     padding: 0px;
     position: absolute;
-    right: 15px;
+    right: 10px;
     background-color: transparent;
     align-items: center;
     outline: none;
@@ -852,9 +845,9 @@ a, a:active, a:hover, a:focus{
 
 }
 .each-faq-header .iconify {
-    font-size: 1.5rem;
-    color: #a9a9bd;
-    opacity: 0.7;
+    font-size: 1.8rem;
+    color: #02031f;
+    opacity: 0.9;
 }
 @media screen and (min-width: 960px) {
     .faqs {
@@ -969,7 +962,7 @@ a, a:active, a:hover, a:focus{
     font-family: 'Poppins', sans-serif;
     font-size: 14px;
     padding: 10px;
-    border: 2px solid #32FF99;
+    border: 2px solid #32FF98;
     outline: none;
     border-radius: 5px;
     margin-left: 5px;
@@ -986,8 +979,8 @@ a, a:active, a:hover, a:focus{
     font-family: 'Poppins', sans-serif;
     font-size: 12px;
     padding: 10px;
-    background-color: #32FF99;
-    border: 2px solid #32FF99;
+    background-color: #32ff98;
+    border: 2px solid #32FF98;
     outline: none;
     border-radius: 5px;
     margin: none;
@@ -1160,7 +1153,7 @@ footer {
 }
 .logo img {
     width: 100%;
-    max-width: 200px;
+    max-width: 150px;
 }
 .all-rights {
     display: flex;
@@ -1215,18 +1208,27 @@ footer {
         padding: 15px;
     }
     .footer-main-section {
+        justify-content: center;
         flex-direction: column-reverse;  
         position: relative;
-        padding-bottom: 40px;
+        padding-bottom: 20px;
      }
      .footer-text {
-        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        justify-content: center;
         flex-direction: column;
         align-items: center;
         margin: 0;
         margin-top: 4rem;
         margin-bottom: 5rem;
         align-items: center;
+        text-align: center !important;
+     }
+     .contact-us-links{
+         display: flex;
+         flex-direction: column;
+         align-items: center;
+         text-align: center !important;
      }
      .logo {
         position: absolute;
@@ -1234,7 +1236,7 @@ footer {
         bottom: 0rem;
     }
     .logo img {
-        max-width: 150px !important;
+        max-width: 100px !important;
     }
     .all-rights {
         margin-bottom: 1rem;
@@ -1855,8 +1857,6 @@ select {
         left: 0;
         padding: 0 3rem;
     }
-
-
     .enroll-text-btn {
         position: relative;
         display: none;
@@ -1973,13 +1973,13 @@ select {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    color: #02031f;
+    color: #08095B;
     text-align: center;
     padding: 0 2rem;
     background-color: #fff;
     width: 40%;
     max-width: 100%;
-    min-height: 580px;
+    min-height: 650px;
     margin: auto;
     box-shadow: 0 14px 28px rgba(95, 95, 95, 0.25), 0 10px 10px rgba(122, 122, 122, 0.25);
     padding: 2rem 1rem;
@@ -1988,8 +1988,12 @@ select {
 .success-header {
     margin-bottom: 2rem;
 }
+.success-header h1 {
+    color: #08095B;
+}
 .success-p {
     margin-top: 2rem;
+    font-weight: 500;
 }
 .success-img {
     width: 100%;
@@ -1997,8 +2001,21 @@ select {
 .success-img img{
     max-width: 250px;
 }
+.success-footer .progress-sign {
+    display: flex;
+}
+.contact-us.contact-us-success p {
+    font-size: 12px;
+    font-weight: 600;
+}
+.contact-us.contact-us-success div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: .4rem;
+}
 .successful-sign-up button {
-    padding: 15px;
+    padding: 12px;
     width: 90%;
     margin: 2rem;
     background-color: #32FF99;
@@ -2017,9 +2034,13 @@ select {
 .successful-sign-up button:hover {
     background-color: transparent;
     border-color: #32ff98;
-    transform: scale(0.95);
+    transform: scaleX(0.98);
     transition: .4s ease;
 } 
+.success-footer {
+    position: relative;
+    width: 100%;
+}
 @media screen and (max-width: 768px) {
 
     .successful-sign-up {
@@ -2028,7 +2049,7 @@ select {
         justify-content: center;
         align-items: center;
         min-width: 100%;
-        height: 100vh;
+        min-height: 100vh;
         background-color: #fff;
         color: #02031f;
         border-radius: 0;
