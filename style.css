@@ -1658,7 +1658,7 @@ select {
         background-color: #fff;
         color: #02031f;
         border-radius: 0;
-        padding: 0 1rem;
+        padding: 0 0.5rem;
         margin: 0;
         overflow: hidden;
         display: none;
