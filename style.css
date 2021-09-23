@@ -174,6 +174,9 @@ a, a:active, a:hover, a:focus{
         max-height: 70px;
         background-color: transparent !important;
     }
+    .nav-bar ul{
+        display: flex !important;
+    }
 }
 @media screen and (max-width: 960px) {
     .showcase {
@@ -240,33 +243,18 @@ a, a:active, a:hover, a:focus{
     .nav-bar li a{
         font-size: 16px;
     }
-    .line {
-        width: 40px;
-        height: 3px;
-        background: #08095B;
-        margin: 7px;
-        transition: 0.25s ease;
-    }
-    .line1 {
-        /* transform: rotate(0deg) !important; */
-    }
-    .line2 {
-        width: 35px;
-        /* transform: rotate(0deg) !important; */
-    }
-    .line3 {
-        width: 30px;
-        /* transform: rotate(0deg) !important; */
-    }
-
     .hamburger {
         display: block;
         position: absolute;
-        top: 10px;
+        top: -15px;
         left: 2px;
         cursor: pointer;
         z-index: 2;
         overflow: hidden;
+    }
+    .burger {
+        font-size: 4rem;
+        color: #08095B;
     }
     .content {
         display: flex;
@@ -1665,7 +1653,7 @@ select {
         overflow: hidden;
         display: none;
         transition: all 0.4s ease;
-        z-index: 1;
+        z-index: 111;
     }
     .enroll-form-div {
         padding: 0 1rem;
@@ -1720,7 +1708,7 @@ select {
         left: 45%;
         transform: translateX(-42.5%);
         padding: 0;
-        z-index: 111;
+        z-index: 1;
     }
     .enroll-logo-why button {
         background: none;
@@ -1749,9 +1737,9 @@ select {
         border: 2px solid #32FF99;
         margin: 10px auto;
         cursor: pointer;
-        box-shadow: -2px -1px 35px -15px rgba(0,0,0,0.75);
-        -webkit-box-shadow: -2px -1px 35px -15px rgba(0,0,0,0.75);
-        -moz-box-shadow: -2px -1px 35px -15px rgba(0,0,0,0.75);
+        box-shadow: -2px -1px 35px -15px rgba(53, 53, 53, 0.75);
+        -webkit-box-shadow: -2px -1px 35px -15px rgba(53, 53, 53, 0.75);
+        -moz-box-shadow: -2px -1px 35px -15px rgba(53, 53, 53, 0.75);
     }
     .enroll-btn:hover {
         transform: translate(0.96);
@@ -1778,17 +1766,13 @@ select {
 
     }
     .why-silicio {
-        /* background: url(./Images/bg.jpg) no-repeat center center / cover;
-        background-color: rgba(22, 22, 22, 0.918);
-        background-blend-mode: multiply; */
         display: flex;
         justify-content: center;
+        flex-direction: column;
         min-width: 100%;
-        min-height: 100vh;
-        padding: 0rem 0em !important;
-        margin: auto;
+        height: 100vh;
+        padding: 0rem 0rem !important;
         overflow: hidden;
-        /* text-align: center; */
         color: #f4f4f4 !important;
         position: relative;
     }
@@ -1799,7 +1783,6 @@ select {
         overflow: hidden;
     }
     .why-silicio-qoute img {
-
         width: 100%;
         object-fit: cover;
         object-position: center;
@@ -1828,6 +1811,9 @@ select {
         font-size: 16px;
         font-weight: 500;
         margin-bottom: 2rem;
+        position: absolute;
+        left: 0;
+        padding: 0 3rem;
     }
 
 
@@ -1843,9 +1829,10 @@ select {
         width: 80%;
         padding: 12px;
         margin: 0 auto;
-        margin-top: 1.5rem;
-        box-shadow: 0 14px 28px rgba(95, 95, 95, 0.25), 0 10px 10px rgba(122, 122, 122, 0.25);
+        margin-top: 2rem;
+        box-shadow: 0 14px 28px rgba(49, 49, 49, 0.25), 0 10px 10px rgba(46, 46, 46, 0.25);
         cursor: pointer;
+        margin-bottom: 2rem;
     }
     .enroll-text-btn .previous-btn {
         display: none;
@@ -1905,17 +1892,14 @@ select {
         display: flex;
         flex-direction: column;
         justify-content: center;
-        height: 100%;
-        position: relative;
-        margin: auto;
-        
+        flex-basis: 50%;
+        min-height: min-content;
     }
     .slide{
         display: flex;
         opacity: 0;
         min-height: 100vh;
         min-width: 100vw;
-        /* border-radius: 20px; */
         background-color: rgba(112, 85, 85, 0.7);
         background-blend-mode: multiply;
         background-position: center;
@@ -1933,10 +1917,16 @@ select {
         display: flex;
         flex-direction: column;
         justify-content: flex-end;
-        /* height: 100%; */
+        flex-basis: 50%;
         width: 100%;
         margin-bottom: 2rem;
     }
+}
+@media screen and (max-width: 450px) {
+    .enroll-text-p{
+        padding: 1rem 1.5rem ;
+    }
+    
 }
 .successful-sign-up {
     display: flex;
