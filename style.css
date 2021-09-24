@@ -1846,6 +1846,7 @@ select {
         font-weight: 800;
         overflow: hidden;
         margin-bottom: 1rem;
+        word-wrap: normal;
     }
     .silicio {
         background-color: #32ff98;
