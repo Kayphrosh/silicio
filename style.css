@@ -459,12 +459,12 @@ a, a:active, a:hover, a:focus{
     }
     .about-text.silicio-target {
         position: relative;
-        margin-top: 400px;
+        margin-top: 350px;
     }
     .why-silicio-container {
         position: absolute;
         right: 2rem;
-        bottom: 100px;
+        bottom: 125px;
         z-index: 1;
     }
 }
