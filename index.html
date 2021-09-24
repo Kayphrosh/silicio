@@ -27,7 +27,7 @@
                 <div class="nav-bar nav-active">
                     <ul>
                         <li><a href="index.html">COURSES</a></li>
-                        <li><a href="index.html" style=" opacity: 0.4">Dashboard</a></li>
+                        <li><a href="index.html" href="javascript:void(0)">Dashboard</a></li>
                         <li><a href="index.html#faq">FAQ</a></li> 
                     </ul>
                 </div> 
@@ -37,7 +37,7 @@
                 <div class="nav-bar nav-active-bottom">
                     <ul>
                         <li><a href="index.html">MENTORS</a></li>
-                        <li><a href="index.html#service">CONTACT</a></li>
+                        <li><a href="index.html#about">ABOUT</a></li>
                         <li><a href="sign-up.html">ENROLL</a></li>
                     </ul>
                 </div>
@@ -71,19 +71,21 @@
             <div class="slider"></div>
         </section>  
     </section>
-    <section class="about-container">
+    <section class="about-container" id="about">
         <div class="about-silicio">
             <div data-aos="fade-in" class="about-img">
                 <img src="./Images/Group 18.png" alt="">
             </div>
             <div class="about">
-                <div data-aos="fade-down" class="about-text">
+                <div data-aos="fade-down each-faq-header" class="about-text">
                     <img src="./Images/information.png" alt="">
                     <div class="about-text-header">
                         <h2>About Silicio</h2> 
                         <div></div>                    
                     </div>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Magni at nemo earum. Sint, consectetur nihil aut praesentium placeat recusandae.</p>
+                    <p>Silicio is a trending and professional technological platform which is set to providing  training and internship in top digital skills to registered students , equipping them with explicit practical knowledge. <p class="read-more-text">And providing them with the best mentorship possible so as to make their dreams come true. Certificates will be issued at the completion of  the courses.</p> 
+                    <button class="read-more-btn">read more..</button>
+                </p>
                 </div>
                 <div data-aos="fade-down" class="why-silicio-container">
                     <img src="./Images/question.svg" alt="">
@@ -91,7 +93,8 @@
                         <div></div>
                         <h2> Why SilicIo</h2>   
                     </div>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Magni at nemo earum. Sint, consectetur nihil aut praesentium placeat recusandae.</p>
+                    <p>We offer  an awe-inspiring physical training where we expose students to  good spheres of  up-to-date learning ,and the easy-to-understand methods of learning our certificate</p> <p class="read-more-text">courses. We also offer the best of service at an affordable rate because sound digital  learning  en masse is our hallmark!</p> 
+                    <button class="read-more-btn">read more..</button>
                 </div>
                 <div data-aos="fade-up"  class="about-text silicio-target">
                     <img src="./Images/target.png" alt="">
@@ -114,7 +117,7 @@
         </section>
         <div class="programming-area-header">
             <h2>Our Digital Garage</h2>
-            <p>Are you a tech enthusiast who wants to learn any of the most amazing digital skills? Or have you started learning any digital skill before but gave up for some reason? Or do you want to hone your skill to perfection? If you belong to any of these categories, then we’ve got you covered. At Silicio, you can learn any digital skill of your choice at your own pace and access free membership that will revolutionize your journey. To get started, click the button bellow!</p>
+            <p>Are you a tech enthusiast who wants to learn any of the most amazing digital skills? Or have you started learning any digital skill before but gave up for some reason? Or do you want to hone your skill to perfection? If you belong to any of these categories, then we’ve got you covered. At Silicio, you can learn any digital skill of your choice at your own pace and access free membership that will revolutionize your journey. To know more, do well to read on.</p>
         </div>
         <div class="available-areas">
             <div class="interval">
@@ -358,6 +361,7 @@
                         <li><a href="./index.html#programmes">Programmes</a></li>
                         <li><a href="./index.html#faq">FAQ</a></li>
                         <li><a href="./index.html#mentors">MENTORS</a></li>
+                        <li><a href="./index.html#about">ABOUT US</a></li>
                         <button onclick="location.href='sign-up.html'"> ENROLL</button>
                     </div>
                 </div>
@@ -394,7 +398,7 @@
 
     <script>
         AOS.init({
-            offset: 130,
+            offset: 160,
             animatedClassName: 'aos-animate', 
             duration: 1000 
         });

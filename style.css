@@ -342,6 +342,7 @@ a, a:active, a:hover, a:focus{
     border-radius: 10px;
     padding: 2rem 2rem;
     margin: 1rem 1rem;
+    transition: all 0.4s ease;
     position: relative;
 }
 
@@ -392,9 +393,10 @@ a, a:active, a:hover, a:focus{
     margin-bottom: 1rem;
     box-shadow: 0px 0px 5px rgba(168, 168, 168, 0.5), 0px 0px 2px rgba(167, 167, 167, 0.5);
     border-radius: 10px;
-    padding: 1rem 2rem;
+    padding: 2rem 2rem;
     position: relative;
     margin: 1rem;
+    transition: all 0.4s ease;
 }
 .why-silicio-header div {
     margin: 0;
@@ -405,7 +407,36 @@ a, a:active, a:hover, a:focus{
     font-family: 'Poppins', sans-serif;
     font-weight: 500;
 }
+.read-more-text {
+    display: none;
+}
+.about-text.read-active .read-more-text{
+    display: block;
+    transition: all 0.4s ease;
+}   
+.why-silicio-container.read-active .read-more-text{
+    display: block;
+    transition: all 0.4s ease;
+}  
+.read-more-btn {
+    font-family: 'Poppins', sans-serif;
+    align-self: flex-start;
+    color: #32ff98;
+    font-size: 14px;
+    margin-top: 2px;
+    cursor: pointer;
+    background: none;
+    border: none;
+    outline: none;
+}
+.why-silicio-container .read-more-btn {
+    align-self: flex-end;
+}
 @media screen and (min-width: 860px) {
+    .about-container {
+        margin: 0;
+        padding: 4rem 0;
+    }
     .about {
         flex-basis: 70%;
     }
@@ -415,7 +446,7 @@ a, a:active, a:hover, a:focus{
     }
     .about-img {
         flex-basis: 30%;
-        margin-left: 0rem;
+        margin-left: 2rem;
     }
     .about-text, .why-silicio-container {
         max-width: 400px;
@@ -424,24 +455,24 @@ a, a:active, a:hover, a:focus{
     .about-text {
         position: absolute;
         top: 10px;
-        transform: translateX(-70%);
+        transform: translateX(-60%);
     }
     .about-text.silicio-target {
         position: relative;
-        margin-top: 300px;
+        margin-top: 400px;
     }
     .why-silicio-container {
         position: absolute;
-        right: 0;
-        bottom: 150px;
-        z-index: 111;
+        right: 2rem;
+        bottom: 100px;
+        z-index: 1;
     }
 }
 
 @media screen and (max-width: 768px) {
     .about-container {
         margin: 0;
-        padding: 0;
+        padding: 2rem 0;
     }
     .about-silicio {
         flex-direction: column-reverse;
@@ -461,6 +492,7 @@ a, a:active, a:hover, a:focus{
     }
     .about-text {
         margin: 1rem 5px;
+        padding-right: 1rem;
     }
     .about-text-header h2 {
         font-size: 26px;
@@ -469,6 +501,7 @@ a, a:active, a:hover, a:focus{
         margin: 5px;
         margin-top: 2rem;
         margin-bottom: 2rem;
+        padding-left: 1rem;
     }
 }
 @media screen and (max-width: 328px) {
