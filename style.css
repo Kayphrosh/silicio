@@ -900,7 +900,7 @@ a, a:active, a:hover, a:focus{
         object-position: center center;
     }
     .mentor-details {
-        padding: 1.5rem;
+        padding: 1.5rem .5rem;
     }
     .mentor-details h2 {
         font-size: 17px;
