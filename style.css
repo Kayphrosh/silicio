@@ -1019,6 +1019,9 @@ a, a:active, a:hover, a:focus{
     .each-faq-header {
         width: inherit;
     }
+    .faq-container{
+        margin-top: 1rem;
+    }
 }
 @media screen and (max-width: 760px) {
     
@@ -1077,7 +1080,7 @@ a, a:active, a:hover, a:focus{
 .newsletter-container {
     display: flex;
     flex-direction: column;
-    padding: 4rem;
+    padding: 0 4rem;
     margin: 0rem 0;
     height: 100%;
 }
