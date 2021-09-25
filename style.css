@@ -890,7 +890,7 @@ a, a:active, a:hover, a:focus{
         margin-right: auto;
     }
     .swiper-slide {
-        min-height: 330px !important;
+        height: 330px !important;
     }
     .swiper-slide img {
         width: 100%;
