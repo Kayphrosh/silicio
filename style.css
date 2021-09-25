@@ -783,7 +783,7 @@ a, a:active, a:hover, a:focus{
     font-size: 14px;}
 .mentors {
     height: 100%;
-    min-width: 1200%;
+    min-width: 1500%;
     overflow: hidden;
     margin-top: 2rem;
     
@@ -817,6 +817,7 @@ a, a:active, a:hover, a:focus{
     color:#f4f4f4;
     padding: 2rem 1rem;
     margin-bottom: auto;
+    text-align: left !important;
 }
 .mentor-details h2 {
     font-size: 18px;
@@ -859,7 +860,7 @@ a, a:active, a:hover, a:focus{
 }
 @media screen and (max-width: 1050px) {
     .mentors {
-        min-width: 400%;
+        min-width: 1000%;
     }
 }
 @media screen and (max-width: 760px) {
@@ -2143,9 +2144,9 @@ select {
     text-align: center;
     padding: 0 2rem;
     background-color: #fff;
-    width: 40%;
+    width: 50%;
     max-width: 100%;
-    min-height: 650px;
+    min-height: 110vh;
     margin: auto;
     box-shadow: 0 14px 28px rgba(95, 95, 95, 0.25), 0 10px 10px rgba(122, 122, 122, 0.25);
     padding: 2rem 1rem;
@@ -2153,16 +2154,20 @@ select {
 }
 .success-header {
     margin-bottom: 2rem;
+    overflow: hidden;
 }
 .success-header h1 {
     color: #08095B;
 }
 .success-p {
+    font-family: 'Poppins', sans-serif;
     margin-top: 2rem;
     font-weight: 500;
+    overflow: hidden;
 }
 .success-img {
     width: 100%;
+    overflow: hidden;
 }
 .success-img img{
     max-width: 250px;
@@ -2177,16 +2182,24 @@ select {
     width: 100%;
 }
 .contact-us.contact-us-success p {
+    font-family: 'Poppins', sans-serif;
     font-size: 12px;
     font-weight: 600;
     text-align: center;
+    overflow: hidden;
 }
 .contact-us.contact-us-success div {
     display: flex;
+    flex-wrap: wrap;
     justify-content: center;
     align-items: center;
     margin-top: .4rem;
     text-align: center;
+    overflow: hidden;
+}
+.contact-us.contact-us-success div li {
+    margin-right: 1rem;
+    overflow: hidden;
 }
 .successful-sign-up button {
     padding: 12px;
@@ -2204,6 +2217,7 @@ select {
     text-align: center;
     border-radius: 5px;
     font-weight: 800;
+    overflow: hidden !important;
 }
 .successful-sign-up button:hover {
     background-color: transparent;
@@ -2214,6 +2228,7 @@ select {
 .success-footer {
     position: relative;
     width: 100%;
+    overflow: hidden;
 }
 @media screen and (max-width: 768px) {
 
