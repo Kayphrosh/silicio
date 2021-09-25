@@ -901,13 +901,13 @@ a, a:active, a:hover, a:focus{
         object-position: center center;
     }
     .mentor-details h2 {
-        font-size: 20px;
+        font-size: 18px;
     }
     .mentor-details h3 {
-        font-size: 16px;
+        font-size: 15px;
     }
     .mentor-details p {
-        font-size: 14px;
+        font-size: 12px;
     }
 } 
 
