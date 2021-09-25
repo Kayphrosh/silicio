@@ -822,22 +822,23 @@ a, a:active, a:hover, a:focus{
 }
 .mentor-details h2 {
     font-size: 18px;
-    margin-bottom: .5rem;
+    margin-bottom: .3rem;
     width: max-content;
-    border-bottom: 2px solid #32FF99;
+    border-bottom: 2px dotted #32FF99;
     line-height: normal;
 }
 .mentor-details h3 {
     font-size: 18px;
     line-height: normal;
     text-transform: capitalize;
-    margin-bottom: .5rem;
+    margin-bottom: .3rem;
 }
 .mentor-details p {
-    font-size: 14px;    font-family: 'Poppins', sans-serif;
+    font-size: 14px;    
+    font-family: 'Poppins', sans-serif;
     font-weight: 500;
     font-size: 10px;
-    line-height: 22px;
+    line-height: 20px;
 }
 /* .swiper-button-prev {
     color: #000000;
@@ -898,11 +899,14 @@ a, a:active, a:hover, a:focus{
         object-fit: cover;
         object-position: center center;
     }
+    .mentor-details {
+        padding: 1.5rem;
+    }
     .mentor-details h2 {
-        font-size: 18px;
+        font-size: 17px;
     }
     .mentor-details h3 {
-        font-size: 15px;
+        font-size: 14px;
     }
     .mentor-details p {
         font-size: 12px;
