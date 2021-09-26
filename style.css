@@ -181,6 +181,9 @@ a, a:active, a:hover, a:focus{
         font-size: 2.5rem;
         line-height: 2.5rem;
     }
+    .content-img {
+        margin-left: 2rem;
+    }
 }
 @media screen and (max-width: 760px) {
     .showcase  {
@@ -307,6 +310,7 @@ a, a:active, a:hover, a:focus{
     color: #08095B;
     min-height: 70vh;
     padding: 1rem;
+    padding-top: 0;
     border-top: 3px solid #08095b73;
     overflow: hidden;
 }
@@ -473,6 +477,7 @@ a, a:active, a:hover, a:focus{
     .about-container {
         margin: 0;
         padding: 2rem 0;
+        padding-top: 1rem;
     }
     .about-silicio {
         flex-direction: column-reverse;
@@ -854,7 +859,7 @@ a, a:active, a:hover, a:focus{
     }
     .swiper-slide {
         width: 360px;
-        min-height: 320px;
+        min-height: 360px;
     } 
 
 }
