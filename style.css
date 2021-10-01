@@ -801,7 +801,7 @@ a, a:active, a:hover, a:focus{
     justify-content:center;
     align-items: center;
     min-width: 320px;
-    max-height: 320px;
+    max-height: 350px;
     border-radius: 10px;
     overflow: hidden;
 }
@@ -870,7 +870,7 @@ a, a:active, a:hover, a:focus{
 }
 @media screen and (max-width: 760px) {
     .mentor-container {
-        /* background-image: url(./Images/Frame\ 1.png); */
+
         background-position: center;
         background-repeat: no-repeat;
 
