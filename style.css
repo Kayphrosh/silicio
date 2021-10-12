@@ -1515,7 +1515,7 @@ footer {
     align-items: center;
     background: #f4f4f4;
     height: 100vh;
-    padding: 20px;
+    padding: 30px;
 }
 .enroll-page-container {
     display: flex;
@@ -1524,13 +1524,13 @@ footer {
     justify-self: center;
     align-self: center;
     background-color: #fff;
-    width: 90%;
+    width: 100%;
     max-width: 100%;
-    min-height: 580px;
+    min-height: 550px;
     margin: auto;
     box-shadow: 0 14px 28px rgba(95, 95, 95, 0.25), 0 10px 10px rgba(122, 122, 122, 0.25);
     border-radius: 20px;
-    padding: 1rem;
+    padding: 0rem;
     overflow: hidden;
     position: relative;
 }
@@ -1543,15 +1543,17 @@ footer {
 .enroll-form {
     display: flex;
     flex-direction: column;
-    background-color: #10101E;
-    color: #f4f4f4;
+    background-color: #ffffff;
+    color: #08095B;
     flex-basis: 50%;
     width: 100%;
     padding: 0rem 2rem;
-    border-radius: 30px;
+    border-radius: 20px;
     text-align: center;
     overflow: hidden;
     height: 100%;
+    margin: auto;
+    z-index: 111;
 }
 .enroll-header {
     margin-bottom: 1rem;
@@ -1626,7 +1628,7 @@ select {
     padding-left: 10px;
     line-height: 3;
     background: transparent;
-    border: 1.5px solid #32FF99;
+    border: 2px solid #32FF99;
     border-radius: 5px;
     overflow: hidden;
  }
@@ -1647,15 +1649,21 @@ select {
     color: #000000;
    padding: 10px 2rem;
 } */
+.enroll-btn-div {
+    /* margin: auto; */
+    min-width: 100%;
+}
 .enroll-btn {
     font-weight: 800;
-    width: fit-content;
-    margin: auto;
-    padding: 10px 4rem;
+    width: 100%;
+    padding: 13px 4rem;
     margin-top: 1rem;
+    margin: 1rem auto !important;
+    margin-left: 1rem;
     border-radius: 5px;
     border: 2px solid #fff;
-    background-color: #f4f4f4;
+    background-color: #32ff98;
+    color: #08095B;
 }
 .enroll-btn:hover {
     background-color: transparent;
@@ -1665,7 +1673,7 @@ select {
     transition: .4s ease;
 }
 .disclaimer {
-    margin-top: 0.2rem;
+    margin-top: 0rem;
 }
 .disclaimer p {
     font-size: 12px;
@@ -1683,9 +1691,11 @@ select {
     position: absolute;
     top: .8rem;
     left: .8rem;
+    display: none;
 }
 .enroll-logo img {
     width: 100%;
+
 }
 .enroll-logo .iconify {
     display: none;
@@ -1694,7 +1704,6 @@ select {
     display: none;
 }
 .why-silicio {
-    background: none;
     flex-basis: 50%;
     display: flex;
     flex-direction: column;
@@ -1708,7 +1717,9 @@ select {
 }
 .why-silicio-qoute {
     width: 100%;
+    margin-right: 0;
     margin-top: 2rem;
+    display: none;
 }
 .why-silicio-qoute img {
     object-fit: cover;
@@ -1718,7 +1729,6 @@ select {
     align-items: center;
     padding: 1rem;
     overflow: hidden;
-    color: #08095B;
 }
 .enroll-text p {
     font-family: 'Poppins', sans-serif;
@@ -1733,7 +1743,6 @@ select {
 .enroll-text-btn button {
     display: flex;
     justify-content: center;
-    position: relative;
     background-color: #32FF99;
     border: 2px solid #32FF99;
     box-shadow: 0 0px 6px rgba(90, 90, 90, 0.25), 0 0px 6px rgba(82, 82, 82, 0.25);
@@ -1744,7 +1753,7 @@ select {
     text-align: center;
     width: 240px;
     padding: 10px;
-    margin: 5px;
+    margin: auto;
     border-radius: 5px;
     font-weight: 800;
 }
@@ -1771,13 +1780,92 @@ select {
 .progress-sign {
     display: none;
 }
-.slider-container {
-    display: none;
-    position: relative;
-    overflow: hidden;
+/* .slider-container {
+    min-height: 100% !important;
+    min-height: 100vh !important;
+} */
+
+.why-silicio-slider {
+    display: block;
+    color: #ffffff;
+    min-height: 100% !important;
+    height: 100% !important;
 }
-@media screen and (min-width: 966px) {
-    .enroll-page-container {
+.slider-container {
+    display: flex;
+    justify-content: center;
+    width: 60%;
+    min-height: 100% !important;
+}
+.enroll-text.enroll-text-slider {
+    display: block;
+}
+.slides-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 0 1rem;
+    align-items: center;
+    position: absolute;
+    left: 50%;
+    top: 0%;
+    width: 50%;
+    height: 100%;
+    color: #f4f4f4 !important;
+}
+.slides-content-main {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    flex-basis: 50%;
+    min-height: min-content;
+}
+.slide{
+    display: flex;
+    opacity: 0;
+    min-height: 100vh;
+    min-height: 100%;
+    min-width: 50%;
+    background-color: rgba(112, 85, 85, 0.7);
+    background-blend-mode: multiply;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: absolute;
+    top: 0;
+    right: 0;
+    transition: 0.4s ease;
+}
+.slide.active {
+    opacity: 1;
+}
+.enroll-text-btn.enroll-btn-slider {
+    display: flex;
+    flex-direction: column;
+    /* justify-content: flex-end; */
+    flex-basis: 50%;
+    width: 100%;
+    margin-bottom: 0rem;
+    margin: auto;
+}
+.silicio {
+    background-color: #32ff98;
+    border-radius: 5px;
+    padding: 3px 1rem;
+    color: #08095B;
+   line-height: 3.5rem;
+   width: max-content;
+}
+.enroll-text-p{
+    font-size: 16px;
+    font-weight: 400;
+    margin-bottom: 2rem;
+    position: absolute;
+    left: 0;
+    padding: 0 3rem;
+}
+@media screen and (min-width: 1066px) {
+    /* .enroll-page-container {
         padding: 2rem;
     }
     .enroll-form {
@@ -1797,6 +1885,16 @@ select {
         position: absolute !important;
         top: .5rem;
         left: .5rem;
+    }*/
+    .enroll {
+        height: 100vh !important;
+    }
+    .slides-content {
+        width: 50%;
+        height: 100%;
+    }
+    .enroll-form { 
+        padding: 0 5rem;
     }
 }
 @media screen and (max-width: 960px) {
@@ -2255,5 +2353,141 @@ select {
         padding: 2rem 1rem;
         margin: 0;
         overflow: hidden;
+    }
+}
+
+.dashboard-container {
+    background-color: #fff;
+    min-height: 100%;
+    width: 100%;
+    overflow: hidden;
+}
+.dashboard-header {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    min-height: 50px;
+    padding: 2rem 6rem;
+    align-items: center;
+}
+.dashboard-logo {
+    max-width: 50px;
+    flex-basis: 50%;
+}
+.dashboard-header .user-name {
+    display: flex;
+    align-items: center;
+    flex-basis: 50%;
+    justify-content: flex-end;
+}
+.user-name h5 {
+    font-size: 20px;
+}
+.user-name img {
+    max-width: 30px;
+    margin-left: .5rem;
+}
+.dashboard-overview-container {
+    display: flex;
+    padding: 2rem 4rem;
+}
+.dashboard-overview{
+    width: 100%;
+    display: flex;
+    align-content: center;
+    flex-wrap: wrap;
+    text-align: center;
+}
+.dashboard-overview .board{
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    align-items: center;
+    margin-bottom: 3rem;
+    margin-left: 2rem;
+    min-width: 350px;
+    width: 300px;
+    height: 250px;
+    background-color: #32ff99;
+    border-radius: 10px;
+    position: relative;
+}
+.board:nth-child(1) {
+    background-color: #500472;
+}
+.board:nth-child(2) {
+    background-color: #caba00;
+}
+.board:nth-child(3) {
+    background-color: #b20238;
+}
+.board:nth-child(4) {
+    background-color: #60dec0;
+}
+.board h3 {
+    font-size: 2.5rem;
+    color: rgb(255, 255, 255);
+    z-index: 111;
+    margin-left: 2rem;
+    margin-top: 2rem;
+}
+.board img {
+    width: 150px;
+    position: absolute;
+    /* top: 10px; */
+    opacity: 0.2;
+    transform: rotate(-20deg);
+}
+@media screen and (max-width: 900px) {
+    .dashboard-overview {
+        flex-basis: 65%;
+    }
+    .leaderboard-container {
+        flex-basis: 35%;
+    }
+}
+@media screen and (max-width: 768px) {
+    .dashboard-header {
+        margin-top: .5rem;
+        padding: 10px 0 !important;
+        box-shadow: -2px -1px 35px -15px rgba(0,0,0,0.75);
+        -webkit-box-shadow: -2px -1px 35px -15px rgba(0,0,0,0.75);
+        -moz-box-shadow: -2px -1px 35px -15px rgba(0,0,0,0.75);
+        padding: 1rem 1rem;
+        margin: auto;
+        margin-top: 1rem;
+        border-radius: 50px;
+        width: 95%;
+        height: 70px;
+    }
+    .dashboard-overview-container {
+        display: flex;
+        flex-direction: column;
+        padding: 2rem 1rem;
+    }
+    .dashboard-overview .board{
+        margin: auto;
+        margin-bottom: 3rem;
+        min-width: 100%;
+    }
+    .dashboard-logo {
+        flex-basis: 30%;
+        max-width: 40px;
+        margin-left: 1rem;
+    }
+    .dashboard-header .user-name {
+        flex-basis: 70%;
+        margin-right: 1rem;
+    }
+    .user-name h5 {
+        /* word-wrap: normal; */
+        word-break: keep-all !important;
+        font-size: 20px;
+    } 
+    .dashboard-overview .board{
+        height: 220px;
+    }
+    .board h3 {
+        font-size: 2rem;
     }
 }
