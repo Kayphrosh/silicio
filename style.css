@@ -1676,6 +1676,7 @@ select {
     margin-top: 0rem;
 }
 .disclaimer p {
+    text-align: center;
     font-size: 12px;
 }
 .silico-name {
@@ -2355,6 +2356,86 @@ select {
         overflow: hidden;
     }
 }
+
+.authentication-container {
+    font-family: 'Poppins', sans-serif !important;
+    display: flex;
+    flex-direction: column;
+}
+/* .authenticate-log {
+} */
+.authenticate-header {
+    align-items: center;
+    text-align: center;
+    margin-top: 2rem;
+}
+.authenticate-form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    row-gap: 1rem;
+    margin: 2rem;
+    position: relative;
+}
+.authenticate-form .form-validate {
+    position: relative;
+    height: 100%;
+    overflow: hidden;
+}
+.form-validate input {
+    padding: 10px 2rem;
+    padding-left: 10px;
+    margin-top: .5rem;
+    border-radius: 5px;
+    border: 2px solid #32FF99;
+    background-color: transparent;
+    outline: none;
+    width: 100%;
+    font-size: 16px;
+    color: #08095B;
+    overflow: hidden;
+    transition: 0.6s ease-in;
+    position: relative;
+}
+.form-validate.error input {
+    border-color: #b20238;
+}
+.form-validate input:hover {
+    border-color: #32FF99;
+}
+
+  
+  .form-validate small {
+    color: var(--error-color);
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    visibility: hidden;
+  }
+  
+  .form-vlidate.error small {
+    visibility: visible;
+  }
+.form-validate p {
+    font-size: 14px;
+}
+.form-validate input::placeholder {
+    font-size: 14px;
+}
+.form-validate .iconify {
+    position: absolute;
+    right: 2rem;
+    top: 2.8rem;
+    font-size: 20px;
+    color: #08095b7c;
+}
+@media screen and (min-width: 968px) {
+    .authentication-container {
+        width: 40%;
+        margin: auto;
+    }
+}
+
 
 .dashboard-container {
     background-color: #fff;

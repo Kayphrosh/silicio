@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <script src="https://code.iconify.design/1/1.0.7/iconify.min.js"></script>
+    <title>Authentication</title>
+
+</head>
+<body>
+    <section class="authentication-container">
+        <div class="enroll-logo authenticate-log">
+            <button onclick="location.href='sign-up.html'"> 
+                <span class="iconify" data-icon="eva:arrow-ios-back-outline"></span>
+            </button>
+    
+            <img src="./Images/logo3.png" alt="">
+        </div>
+        <div class="authenticate-header">
+            <h2>Authentication</h2>
+            <p>Get Your Account Authenticated!</p>
+        </div>
+        <form action="" class="authenticate-form" id="form-authentication">
+            <div class="form-validate">
+                <p>Username</p>
+                <input type="text" placeholder="e.g @johndoe" id="username">
+                <span class="iconify" data-icon="carbon:user-filled"></span>
+                <small>Error message</small>
+            </div>
+            <div class="form-validate">
+                <p>Email</p>
+                <input type="email" name="email" id="email" placeholder=" enter your email address">
+                <span class="iconify" data-icon="ic:baseline-email"></span>
+                <small>Error message</small>
+            </div>
+            <div class="form-validate">
+                <p>Password</p>
+                <input type="password" name="" id="password" placeholder="enter password">
+                <span class="iconify" data-icon="carbon:view-off-filled"></span>
+                <small>Error message</small>
+            </div>
+            <div class="form-validate">
+                <p>Confirm Password</p>
+                <input type="password" name="" id="password2" placeholder="enter password">
+                <span class="iconify" data-icon="carbon:view-off-filled"></span>
+                <small>Error message</small>
+            </div>
+            <div class="authenticate-btn">
+                <button class="enroll-btn">AUTHENTICATE</button>
+            </div>
+        </form>
+        <div class="disclaimer">
+            <p>By signing up, you've agreed to our terms and policies. <a href="terms.html"></a></p>
+            <p>Silicio &copy;  2021 - All rights reserved. </p>
+        </div>
+
+    </section>
+    <script src="app.js"></script>
+</body>
+</html>
