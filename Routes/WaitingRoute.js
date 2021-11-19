@@ -3,7 +3,7 @@ const router = express.Router()
 
 const WaitingController = require('../Controllers/WaitingController')
 
-router.post('/waitings', WaitingController.index)
+router.get('/waitings', WaitingController.index)
 router.post('/waitings/add', WaitingController.add)
 router.post('/waitings/news', WaitingController.news)
 

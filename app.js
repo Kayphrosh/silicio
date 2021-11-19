@@ -153,16 +153,16 @@ const password2 = document.getElementById('password2');
 
 // Show input error message
 function showError(input, message) {
-  const formControl = input.parentElement;
-  formControl.className = 'form-validate error';
-  const small = formControl.querySelector('small');
+  const formAuthentication = input.parentElement;
+ formAuthentication.className = 'form-validate error';
+  const small = formAuthentication.querySelector('small');
   small.innerText = message;
 }
 
 // Show success outline
 function showSuccess(input) {
-  const formControl = input.parentElement;
-  formControl.className = 'form-control success';
+  const formAuthentication = input.parentElement;
+ formAuthentication.className = 'form-validate success';
 }
 
 // Check email is valid
